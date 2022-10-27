@@ -37,8 +37,20 @@ static class MyBuilder{
         protein = value;
         return this;
     }
+
+    public Builder build()
+    {
+
+    return new Builder(this);}
 }
 
+private Builder (MyBuilder myBuilder)
+{
+    calories = myBuilder.calories;
+    minerals = myBuilder.minerals;
+    fat = myBuilder.fat;
+    protein = myBuilder.protein;
+}
 
 }
 
