@@ -2,6 +2,10 @@ package com.company;
 
 public class Fasad {
 
+    public static void main(String[] args) {
+       Parameters parameters = new Parameters();
+       parameters.lounge();
+    }
 }
  interface Animals{
     void eat();
@@ -42,20 +46,19 @@ public class Fasad {
  }
  class Parameters{
 
-   final int animalSpeed = 100;
-   final  int fishSpeed = 60;
-
      private final Shark shark;
      private final Tiger tiger;
 
-     public Parameters(Shark shark, Tiger tiger) {
+     public Parameters() {
          this.shark = new Shark();
          this.tiger = new Tiger();
      }
 
      public void lounge(){
+         int fishSpeed = 60;
          shark.speed(fishSpeed);
          shark.swimming();
+         int animalSpeed = 100;
          tiger.speed(animalSpeed);
          tiger.eat();
      }
