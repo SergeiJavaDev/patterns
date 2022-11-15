@@ -4,7 +4,7 @@ public class Proxy {
 
     public static void main(String[] args) {
         SumProxy sumProxy = new SumProxy();
-
+        System.out.println(sumProxy.compute(1.0, 1.0));
     }
 
 }
@@ -43,7 +43,7 @@ private void launch(){
      @Override
      public Double compute(Double i, Double i2) {
          launch();
-         return (sum.compute(i, i2)) ;
+         return i + i2 ;
      }
      private void launch(){
          if (sum == null){
